@@ -10,6 +10,18 @@ def insertion_sort(array):
                 array[j] = tmp
 
 if __name__=="__main__":
-    unsorted = [3, 1, 5]
+    unsorted = None
     insertion_sort(unsorted)
-    assert(unsorted == [1, 3, 5]), "Still not sorted!"
+    assert(unsorted == None), "Still not sorted"
+
+    unsorted = [1]
+    insertion_sort(unsorted)
+    assert(unsorted == [1]), "Still not sorted"
+
+    unsorted = [1, 1]
+    insertion_sort(unsorted)
+    assert(unsorted == [1, 1]), "Still not sorted"
+
+    unsorted = [-1, -2, -3, -4, -5]
+    insertion_sort(unsorted)
+    assert(unsorted == [-5, -4, -3, -2, -1]), "Still not sorted"
