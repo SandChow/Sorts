@@ -8,8 +8,8 @@ def insertion_sort(array):
                     array[j] = array[j-1]
                     j -= 1
                 array[j] = tmp
-        return array
 
 if __name__=="__main__":
-    print insertion_sort(None)
-
+    unsorted = [3, 1, 5]
+    insertion_sort(unsorted)
+    assert(unsorted == [1, 3, 5]), "Still not sorted!"
